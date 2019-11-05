@@ -10,12 +10,12 @@ const About = () => <div>About</div>;
 const Contact = (
   { navigate } // navigate is accessible here because Contact is a SubComponent of Router, in the VDom
 ) => (
-  <div>
+  <>
     <div>Contact</div>
     <button onClick={() => navigate("/about")}>
       programmatically navigate to about
     </button>
-  </div>
+  </>
 );
 
 const source = createHashSource();
