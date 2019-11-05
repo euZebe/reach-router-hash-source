@@ -2,6 +2,8 @@ import { createHistory, Link, LocationProvider, Router } from "@reach/router";
 import React from "react";
 import ReactDOM from "react-dom";
 import createHashSource from "hash-source";
+import HugeComponent from "./HugeComponent";
+import "./styles.css";
 
 const Home = () => <div>Home</div>;
 const About = () => <div>About</div>;
@@ -27,6 +29,7 @@ function App() {
           <Link to="/">Home</Link>
           <Link to="about">About</Link>
           <Link to="contact">Contact</Link>
+          <Link to="huge-component">Huge component</Link>
         </nav>
       </header>
 
@@ -36,6 +39,7 @@ function App() {
         <Home path="/" />
         <About path="about" />
         <Contact path="contact" />
+        <HugeComponent path="huge-component" />
       </Router>
     </LocationProvider>
   );
