@@ -5,9 +5,14 @@ import createHashSource from "hash-source";
 
 const Home = () => <div>Home</div>;
 const About = () => <div>About</div>;
-const Contact = ({ navigate }) => (
+const Contact = (
+  { navigate } // navigate is accessible here because Contact is a SubComponent of Router, in the VDom
+) => (
   <div>
-    Contact<button onClick={() => navigate("/about")}>submit</button>
+    <div>Contact</div>
+    <button onClick={() => navigate("/about")}>
+      programmatically navigate to about
+    </button>
   </div>
 );
 
