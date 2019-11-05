@@ -1,3 +1,7 @@
 a {
   margin: 0 0.2rem;
 }
+
+.wont-work {
+  color: #ee3333;
+}

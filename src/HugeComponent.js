@@ -1,13 +1,18 @@
 import React from "react";
-import { Location } from "@reach/router";
+import { Location, navigate as globalNavigate } from "@reach/router";
 
 // to prevent `navigate` prop drilling, we can also use the Location component
 const NonRoutedComponent = () => (
-  <Location>
-    {({ navigate }) => (
-      <button onClick={() => navigate("/")}>Submit then Back home</button>
-    )}
-  </Location>
+  <div>
+    <Location>
+      {({ navigate }) => (
+        <button onClick={() => navigate("/")}>Submit then Back home</button>
+      )}
+    </Location>
+    <button onClick={() => globalNavigate("/about")} class="wont-work">
+      global navigate will break the hash behaviour.
+    </button>
+  </div>
 );
 
 const SubComponent = () => (
